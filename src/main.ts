@@ -1,4 +1,4 @@
-import { Loro as LoroV15 } from "npm:loro-crdt@0.15.5-alpha.0";
+// import { Loro as LoroV15 } from "npm:loro-crdt@0.15.5-alpha.0";
 import { Loro as LoroV16 } from "npm:loro-crdt@0.16.4-alpha.0";
 import { parse } from "https://deno.land/std@0.200.0/flags/mod.ts";
 import type { Args } from "https://deno.land/std@0.200.0/flags/mod.ts";
@@ -57,11 +57,12 @@ if (!inputPath || !outputPath) {
 }
 
 const data = Deno.readFileSync(inputPath);
-const loro = new LoroV15();
+const loro = new LoroV16();
 loro.import(data);
+// @ts-ignore
 const jsonObj = loro.exportJsonUpdates();
-console.log(jsonObj);
 const loroNew = new LoroV16();
+// @ts-ignore
 loroNew.importJsonUpdates(jsonObj);
 const snapshot = loroNew.exportSnapshot();
 Deno.writeFileSync(outputPath, snapshot);
