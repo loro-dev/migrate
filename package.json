@@ -1,0 +1,21 @@
+{
+  "name": "loro-migrate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "deno run --allow-write --allow-read --allow-env --allow-sys src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "loro-crdt": "0.15.2"
+  },
+  "devDependencies": {
+    "@types/assert": "^1.5.10",
+    "@typescript-eslint/parser": "^6.2.0",
+    "typescript": "^5.0.2"
+  }
+}
