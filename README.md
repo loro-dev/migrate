@@ -5,7 +5,13 @@ Convert Loro snapshot from versions older than v0.16 to the latest version.
 ## Usage
 
 ```bash
-npm install -g loro-migrate
+npx loro-migrate /path/old-snapshot /path/new-snapshot
+```
 
-loro-migrate /path/old-snapshot /path/new-snapshot
+```ts
+import { migrate } from "loro-migrate";
+
+const oldSnapshot: Uint8Array = ......;
+const newSnapshot: Uint8Array = migrate(oldSnapshot);
+
 ```

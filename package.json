@@ -1,0 +1,25 @@
+{
+  "name": "loro-migrate",
+  "version": "0.1.2",
+  "description": "Migrate Tool for Loro",
+  "main": "index.js",
+  "bin": "cli.js",
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "cli": "ts-node cli.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "loro-crdt": "0.16.4-alpha.0",
+    "loro-crdt-old": "npm:loro-crdt@=0.15.5-alpha.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/yargs": "^17.0.32",
+    "@typescript-eslint/parser": "^6.2.0",
+    "typescript": "^5.0.2"
+  }
+}
