@@ -1,25 +1,46 @@
 {
   "name": "loro-migrate",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Migrate Tool for Loro",
-  "bin": "cli.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "loro-migrate": "dist/index.cjs"
+  },
+  "homepage": "https://github.com/loro-dev/migrate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loro-dev/migrate.git"
+  },
   "scripts": {
-    "dev": "ts-node index.ts",
-    "cli": "ts-node cli.ts"
+    "build": "unbuild",
+    "prepack": "unbuild",
+    "cli": "ts-node index.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "leon7hao",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "loro-crdt": "1.0.0-beta.4",
-    "loro-crdt-v016": "npm:loro-crdt@=0.16.12",
     "loro-crdt-v015": "npm:loro-crdt@=0.15.5-alpha.0",
+    "loro-crdt-v016": "npm:loro-crdt@=0.16.12",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@types/yargs": "^17.0.32",
     "@typescript-eslint/parser": "^6.2.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "unbuild": "^2.0.0"
   }
 }

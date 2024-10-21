@@ -2,7 +2,8 @@
 import yargs from "yargs/yargs";
 import { hideBin } from "yargs/helpers";
 import fs from "fs";
-import { LoroVersion, migrate } from ".";
+import { LoroVersion, migrate } from "./migrate";
+export { LoroVersion, migrate } from "./migrate";
 
 const args = yargs(hideBin(process.argv))
   .usage("Usage: loro-migrate [OPTIONS...]")
